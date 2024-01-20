@@ -6,16 +6,16 @@ export const socials: SocialsProps[] = [
   {
     id: 1,
     image: google,
-    link: "google.com",
+    link: "https://www.google.com/",
   },
   {
     id: 2,
     image: apple,
-    link: "apple.com",
+    link: "https://www.apple.com/",
   },
   {
     id: 1,
     image: facebook,
-    link: "facebook.com",
+    link: "https://www.facebook.com/",
   },
 ];

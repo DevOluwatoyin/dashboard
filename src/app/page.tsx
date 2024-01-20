@@ -11,10 +11,10 @@ export default function Home() {
   return (
     <main className="relative bg-gradient-linear min-h-screen p-10 py-8 text-white overflow-hidden md:flex md: justify-between md:bg-none md:p-0">
       <div className="flex-1 md:bg-gradient-linear md:relative md:px-10 md:py-8 md:max-w-[586px]">
-        <div className="flex items-center gap-1">
+        <Link href="/" className="flex items-center gap-1">
           <Image src={logo} alt="stryke logo" />
           <span className="font-bold text-[38.769px]">Stryke</span>
-        </div>
+        </Link>
 
         <div className="pt-2 hidden top-32 md:block md:relative md:pl-8">
           <p className="text-4xl font-bold max-w-[433px]">
@@ -50,7 +50,7 @@ export default function Home() {
             />
             <Input
               label="Password"
-              type="email"
+              type="password"
               name="password"
               id="password"
               placeholder="********"
@@ -58,7 +58,8 @@ export default function Home() {
 
             <Button
               text="Sign in"
-              buttonStyles="bg-primary px-6 py-4 rounded-lg text-white font-semibold text-sm"
+              buttonStyles="w-full bg-primary px-6 py-4 rounded-lg text-white font-semibold text-sm"
+              link="dashboard"
               linkStyles="w-full"
             />
           </form>

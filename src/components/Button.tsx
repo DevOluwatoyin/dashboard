@@ -11,7 +11,12 @@ const Button: React.FC<GeneralButtonProps> = ({
 }) => {
   if (link)
     return (
-      <Link href={link} className={linkStyles}>
+      <Link
+        href={link}
+        target="_blank"
+        rel="no referrer"
+        className={linkStyles}
+      >
         <button className={buttonStyles}>
           {icon ? (
             <div className="relative w-4 h-4">
