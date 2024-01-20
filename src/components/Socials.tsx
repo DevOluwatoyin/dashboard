@@ -12,7 +12,7 @@ const Socials: React.FC<SocialsGroup> = ({ socialsArr: SocialsProps }) => {
             link={item.link}
             icon={item.image}
             buttonStyles="bg-white px-6 py-4 rounded-lg shadow-min"
-            linkStyles="w-auto"
+            linkStyles=""
           />
         );
       })}

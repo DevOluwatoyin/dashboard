@@ -11,7 +11,7 @@ const Button: React.FC<GeneralButtonProps> = ({
 }) => {
   if (link)
     return (
-      <Link href={link} className={`w-full ${linkStyles}`}>
+      <Link href={link} className={linkStyles}>
         <button className={buttonStyles}>
           {icon ? (
             <div className="relative w-4 h-4">

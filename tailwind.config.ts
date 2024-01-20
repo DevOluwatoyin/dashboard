@@ -23,9 +23,10 @@ const config: Config = {
         "gray-light": "#7A828A",
         "gray-lighter": "#7A7A9D",
         "border-light": "#EDF2F7",
+        "heading-dark": "#27272E",
       },
       boxShadow: {
-        "min": "0px 1px 3px 0px rgba(50, 50, 71, 0.10), 0px 0px 1px 0px rgba(12, 26, 75, 0.20)",
+        min: "0px 1px 3px 0px rgba(50, 50, 71, 0.10), 0px 0px 1px 0px rgba(12, 26, 75, 0.20)",
         "3xl":
           " 0px 0px 1px 0px rgba(50, 50, 71, 0.20), 0px 1px 2px 0px rgba(50, 50, 71, 0.08);",
       },
