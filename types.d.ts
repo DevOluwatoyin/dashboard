@@ -11,6 +11,8 @@ declare global {
     icon?: string;
     buttonStyles?: CSSProperties;
     linkStyles?: CSSProperties;
+    target?: string;
+    rel?: string;
   }
 
   interface InputProps {

@@ -66,7 +66,7 @@ export default function Signup() {
             <Button
               text="Sign up"
               buttonStyles="w-full bg-primary px-6 py-4 rounded-lg text-white font-semibold text-sm"
-              link="dashboard"
+              link="/dashboard"
               linkStyles="w-full"
             />
           </form>

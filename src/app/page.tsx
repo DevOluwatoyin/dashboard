@@ -59,7 +59,7 @@ export default function Home() {
             <Button
               text="Sign in"
               buttonStyles="w-full bg-primary px-6 py-4 rounded-lg text-white font-semibold text-sm"
-              link="dashboard"
+              link="/dashboard"
               linkStyles="w-full"
             />
           </form>

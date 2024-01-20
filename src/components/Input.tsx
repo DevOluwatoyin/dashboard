@@ -16,7 +16,7 @@ const Input: React.FC<InputProps> = ({
         id={name}
         value={value}
         placeholder={placeholder}
-        required
+        // required
       />
     </label>
   );
