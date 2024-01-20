@@ -5,6 +5,7 @@ import Input from "@/components/Input";
 import Button from "@/components/Button";
 import { socials } from "@/constants/socials";
 import Socials from "@/components/Socials";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -31,46 +32,52 @@ export default function Home() {
         </div>
       </div>
 
-      <section className="login pt-4 md:bg-white flex-1 md:text-heading-dark">
-        <span className="text-4xl font-bold wave">👋</span>
-        <h2 className="text-[28px] font-semibold py-2">Welcome back!</h2>
-        <p>Let&apos;s build something great</p>
-        <form action="" className="pt-3 flex flex-col justify-between gap-6">
-          <Input
-            label="E-mail or phone number"
-            type="email"
-            id="email or phone number"
-            name="email or phone number"
-            placeholder="Type your e-mail or phone number"
-          />
-          <Input
-            label="Password"
-            type="email"
-            name="password"
-            id="password"
-            placeholder="********"
-          />
+      <section className="login pt-4 flex-1 md:bg-white  md:text-heading-dark md:grid items-center content-center">
+        <div className="md:w-[312px] md:mx-auto md:space-y-[30px]">
+          <span className="text-4xl font-bold wave">👋</span>
+          <div>
+            <h2 className="text-[28px] font-semibold py-2">Welcome back!</h2>
+            <p>Let&apos;s build something great</p>
+          </div>
 
-          <Button
-            text="Sign in"
-            buttonStyles="bg-primary px-6 py-4 rounded-lg"
-            linkStyles="w-full"
-          />
-        </form>
+          <form action="" className="pt-3 flex flex-col justify-between gap-6">
+            <Input
+              label="E-mail or phone number"
+              type="email"
+              id="email or phone number"
+              name="email or phone number"
+              placeholder="Type your e-mail or phone number"
+            />
+            <Input
+              label="Password"
+              type="email"
+              name="password"
+              id="password"
+              placeholder="********"
+            />
 
-        <p className="text-[10px] md:text-gray-lighter text-center py-4">
-          <span className="inline-block w-[70px] h-[1px] mr-4 bg-border-light"></span>
-          or do it via other accounts
-          <span className="inline-block w-[70px] h-[1px] ml-4 bg-border-light"></span>
-        </p>
+            <Button
+              text="Sign in"
+              buttonStyles="bg-primary px-6 py-4 rounded-lg text-white font-semibold text-sm"
+              linkStyles="w-full"
+            />
+          </form>
 
-        <Socials socialsArr={socials} />
+          <div>
+            <p className="text-[10px] md:text-gray-lighter text-center py-4">
+              <span className="inline-block w-[70px] h-[1px] mr-4 bg-border-light"></span>
+              or do it via other accounts
+              <span className="inline-block w-[70px] h-[1px] ml-4 bg-border-light"></span>
+            </p>
 
-        <p className="relative top-3 z-10 text-white text-sm md:text-gray-lighter text-right font-semibold">
+            <Socials socialsArr={socials} />
+          </div>
+        </div>
+        <p className="relative top-3 z-10 text-white text-sm md:text-gray-lighter text-right font-semibold md:right-4">
           Don&apos;t have an account?
-          <a href="/" className="text-primary">
+          <Link href="/signup" className="text-primary ml-1">
             Get started
-          </a>
+          </Link>
         </p>
       </section>
     </main>
