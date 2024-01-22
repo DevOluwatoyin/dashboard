@@ -11,7 +11,7 @@ import logout from "../assets/logout.svg"
 
 const Sidebar = () => {
   return (
-    <div className="drop bg-white w-[250px] flex-shrink-0 text-center h-screen">
+    <div className="drop bg-white w-[250px] flex-shrink-0 text-center h-screen fixed">
       <Link
         href="/dashboard"
         className="flex items-center gap-1 relative top-8 left-6 max-w-[200px]"

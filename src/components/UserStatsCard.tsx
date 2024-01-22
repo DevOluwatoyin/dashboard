@@ -7,7 +7,7 @@ const UserStatsCard: React.FC<{ statDetails: StatsProps }> = ({
   return (
     <div
       key={item.id}
-      className="drop w-[255px] h-[100px] flex items-center pl-6 gap-3 bg-white rounded-2xl flex-shrink-0"
+      className="drop w-[255px] h-[100px] flex items-center pl-6 gap-3 bg-white rounded-2xl flex-shrink-0 flex-1"
     >
       <Image src={item.image} alt="connectivity icon" />
       <div>
