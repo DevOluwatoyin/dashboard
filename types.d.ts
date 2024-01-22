@@ -28,7 +28,7 @@ declare global {
 
   interface GeneralListData {
     id: number;
-    image: string | StaticImageData;
+    image: string;
     link?: string;
   }
   
@@ -39,7 +39,9 @@ declare global {
     style: string;
   }
 
-  interface InterviewProps extends GeneralListData {
+  interface InterviewProps {
+    id: number;
+    image: string | StaticImageData;
     name: string;
     companyName: string;
     companyImage: string | StaticImageData;
