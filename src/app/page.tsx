@@ -3,7 +3,6 @@ import logo from "../assets/logo.svg";
 import chat from "../assets/chat-bubble.svg";
 import Input from "@/components/Input";
 import Button from "@/components/Button";
-import { socials } from "@/constants/socials";
 import Socials from "@/components/Socials";
 import Link from "next/link";
 
@@ -71,7 +70,7 @@ export default function Home() {
               <span className="inline-block w-[70px] h-[1px] ml-4 bg-border-light"></span>
             </p>
 
-            <Socials socialsArr={socials} />
+            <Socials />
           </div>
         </div>
         <p className="relative top-3 z-10 text-white text-sm md:text-gray-lighter text-right font-semibold md:right-4">

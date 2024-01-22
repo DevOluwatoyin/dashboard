@@ -2,7 +2,7 @@ import { socials } from "@/constants/socials";
 import React from "react";
 import Button from "./Button";
 
-const Socials: React.FC<SocialsGroup> = ({ socialsArr: SocialsProps }) => {
+const Socials= () => {
   return (
     <div className="flex justify-center gap-4 relative z-10">
       {socials.map((item, id: number) => {

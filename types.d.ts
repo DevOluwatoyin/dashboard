@@ -16,22 +16,24 @@ declare global {
   }
 
   interface InputProps {
-    name?: string;
+    name: string;
     value?: string;
-    label?: string;
+    label: string;
     type?: HTMLInputTypeAttribute;
-    placeholder?: string;
-    borders?;
+    placeholder: string;
     id?: string;
   }
 
-  interface SocialsProps {
+  interface GeneralListData {
     id: number;
     image: string;
-    link: string;
+    link?: string;
+    title?: string;
   }
 
-  interface SocialsGroup {
-    socialsArr: SocialsProps[];
+  interface StatsProps extends GeneralListData {
+    value: string;
+    rate: string;
+    style: string;
   }
 }

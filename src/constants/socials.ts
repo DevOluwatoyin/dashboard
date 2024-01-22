@@ -2,7 +2,7 @@ import google from "../assets/google.svg";
 import apple from "../assets/apple.svg";
 import facebook from "../assets/facebook.svg";
 
-export const socials: SocialsProps[] = [
+export const socials: GeneralListData[] = [
   {
     id: 1,
     image: google,
