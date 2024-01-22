@@ -39,6 +39,12 @@ declare global {
     style?: CSSProperties;
   }
 
+  interface ContactsData{
+    name: string;
+    image: StaticImageData;
+    location: string;
+  }
+
   interface StatsProps extends GeneralListData {
     title: string;
     value: string;

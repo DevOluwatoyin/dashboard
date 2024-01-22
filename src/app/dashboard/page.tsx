@@ -1,15 +1,15 @@
 import DashboardHeader from "@/components/DashboardHeader";
 import Interviews from "@/components/Interviews";
 import UserStats from "@/components/UserStats";
-import Cta from "@/components/Cta";
 import Sidebar from "@/components/Sidebar";
 import React from "react";
+import Cta from "@/components/Cta";
 
 const Dashboard = () => {
   return (
     <div className="flex">
       <Sidebar />
-      <div>
+      <div className="flex-1">
         <DashboardHeader />
         <div className="flex flex-col p-[30px] gap-[30px] bg-gradient-linear-two">
           <UserStats />
