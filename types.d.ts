@@ -1,3 +1,5 @@
+import { StaticImageData } from "next/image";
+
 // Global state types
 export {};
 declare global {
@@ -26,14 +28,20 @@ declare global {
 
   interface GeneralListData {
     id: number;
-    image: string;
+    image: string | StaticImageData;
     link?: string;
-    title?: string;
   }
-
+  
   interface StatsProps extends GeneralListData {
+    title: string;
     value: string;
     rate: string;
     style: string;
+  }
+
+  interface InterviewProps extends GeneralListData {
+    name: string;
+    companyName: string;
+    companyImage: string | StaticImageData;
   }
 }

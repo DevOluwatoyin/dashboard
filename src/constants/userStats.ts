@@ -2,6 +2,7 @@ import pinkIcon from "../assets/pink-connection.svg";
 import blueIcon from "../assets/blue-connection.svg";
 import orangeIcon from "../assets/orange-connection.svg";
 import greenIcon from "../assets/green-connection.svg";
+
 export const stats: StatsProps[] = [
   {
     id: 1,
