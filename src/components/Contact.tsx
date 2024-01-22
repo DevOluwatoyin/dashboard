@@ -5,7 +5,7 @@ import ContactCard from "./ContactCard";
 
 const Contact = () => {
   return (
-    <div className="top-32 relative">
+    <div className="top-24 relative">
       <h5 className="flex items-center gap-3 pl-6">
         <span className="uppercase text-[11px] font-semibold text-gray-lighter">
           Contacts

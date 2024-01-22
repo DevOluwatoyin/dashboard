@@ -11,7 +11,7 @@ import logout from "../assets/logout.svg"
 
 const Sidebar = () => {
   return (
-    <div className="drop bg-white w-[250px] flex-shrink-0 text-center">
+    <div className="drop bg-white w-[250px] flex-shrink-0 text-center h-screen">
       <Link
         href="/dashboard"
         className="flex items-center gap-1 relative top-8 left-6 max-w-[200px]"
@@ -21,26 +21,35 @@ const Sidebar = () => {
           Stryke
         </span>
       </Link>
-      <div className="flex flex-col w-full relative top-20 justify-between">
+      <div className="flex flex-col w-full relative top-16 justify-between">
         {sideLists.map((item) => (
           <Button
             key={item.id}
             icon={item.image}
             text={item.text}
             number={item.number}
-            buttonStyles={`flex flex-between items-center px-8 py-4 gap-5 font-semibold text-sm text-gray-dark ${item.style}`}
+            buttonStyles={`flex flex-between items-center px-6 py-3 gap-5 font-semibold text-sm text-gray-dark ${item.style}`}
           />
         ))}
       </div>
 
-      <Image src={divider} alt="divider" className="relative -bottom-24" />
+      <Image src={divider} alt="divider" className="relative -bottom-[70px]" />
 
       <Contact />
 
-      {/* <div className="mt-auto">
-        <Button icon={user} text="Account" />
-        <Button icon={logout} text="Logout" />
-      </div> */}
+      <div className="relative -bottom-36 flex flex-col">
+        <Button
+          icon={user}
+          text="Account"
+          buttonStyles="flex flex-between items-center px-6 py-3 gap-5 font-semibold text-sm text-gray-dark"
+        />
+        <Button
+          icon={logout}
+          text="Logout"
+          link="/"
+          buttonStyles="flex flex-between items-center px-6 py-3 gap-5 font-semibold text-sm text-gray-dark"
+        />
+      </div>
     </div>
   );
 };
