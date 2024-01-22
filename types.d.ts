@@ -15,6 +15,7 @@ declare global {
     linkStyles?: CSSProperties;
     target?: string;
     rel?: string;
+    number?: string;
   }
 
   interface InputProps {
@@ -31,7 +32,13 @@ declare global {
     image: string;
     link?: string;
   }
-  
+
+  interface SideListData extends GeneralListData {
+    text: string;
+    number?: string;
+    style?: CSSProperties;
+  }
+
   interface StatsProps extends GeneralListData {
     title: string;
     value: string;

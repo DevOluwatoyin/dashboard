@@ -10,6 +10,7 @@ const Button: React.FC<GeneralButtonProps> = ({
   linkStyles = "",
   target,
   rel,
+  number,
 }) => {
   if (link)
     return (
@@ -33,6 +34,11 @@ const Button: React.FC<GeneralButtonProps> = ({
           </div>
         ) : null}
         {text ? <span className="w-max">{text}</span> : null}
+        {number && (
+          <span className="w-max inline-block text-primary bg-[#E1E8FF] px-[10px] py-0.5 rounded-full ml-auto">
+            {number}
+          </span>
+        )}
       </button>
     );
 };
