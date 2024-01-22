@@ -8,26 +8,26 @@ export const sideLists: GeneralListData[] = [
   {
     id: 1,
     image: home,
-    title: "Dashboard",
+    // title: "Dashboard",
   },
   {
     id: 2,
     image: hamster,
-    title: "Projects",
+    // title: "Projects",
   },
   {
     id: 3,
     image: chat,
-    title: "Messages",
+    // title: "Messages",
   },
   {
     id: 4,
     image: services,
-    title: "Services",
+    // title: "Services",
   },
   {
     id: 5,
     image: customers,
-    title: "Customers",
+    // title: "Customers",
   },
 ];
