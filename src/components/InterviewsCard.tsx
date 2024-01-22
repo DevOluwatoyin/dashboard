@@ -11,15 +11,20 @@ const InterviewsCard: React.FC<{ interviewDetails: InterviewProps }> = ({
     <div className="drop bg-white w-[255px] h-[203px] flex-shrink-0 rounded-2xl flex items-center justify-center">
       <div>
         <div className="flex justify-between items-start">
-          <div className="relative w-14">
+          <div>
             <Image src={item.image} alt={item.name} />
             <Image
               src={item.companyImage}
               alt={item.companyName}
-              className="absolute bottom-0 -right-3"
+              className="relative -bottom-2.5 right-3"
             />
           </div>
-          <Image src={more} alt="view more options" />
+          <button>
+            <Image
+              src={more}
+              alt="view more options"
+            />
+          </button>
         </div>
         <p className="mt-[11px]">
           <span className="block font-semibold leading-[25px] text-heading-dark">

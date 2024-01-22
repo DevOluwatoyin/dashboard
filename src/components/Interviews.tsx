@@ -7,7 +7,7 @@ const Interviews = () => {
     <section>
       <div className="flex h-[22px] justify-between items-end font-bold">
         <h4 className="text-lg text-heading-dark">Interviews</h4>
-        <span className="text-xs text-primary">Show all</span>
+        <button className="text-xs text-primary">Show all</button>
       </div>
       <div className="flex items-center flex-wrap gap-8">
         {interviewsData.map((item: InterviewProps) => (
