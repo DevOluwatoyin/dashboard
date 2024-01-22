@@ -72,9 +72,9 @@ export default function Signup() {
 
           <div>
             <p className="text-[10px] md:text-gray-lighter text-center py-4">
-              <span className="inline-block w-[70px] h-[1px] mr-4 bg-border-light"></span>
+              <span className="inline-block w-[40px] h-[1px] mr-4 bg-border-light md:w-[70px]"></span>
               or do it via other accounts
-              <span className="inline-block w-[70px] h-[1px] ml-4 bg-border-light"></span>
+              <span className="inline-block w-[40px] h-[1px] ml-4 bg-border-light md:w-[70px]"></span>
             </p>
 
             <Socials />
@@ -82,7 +82,10 @@ export default function Signup() {
         </div>
         <p className="relative top-3 z-10 text-white text-sm md:text-gray-lighter text-right font-semibold md:right-4">
           Already have an account?
-          <Link href="/" className="text-primary ml-1">
+          <Link
+            href="/"
+            className="text-primary ml-1 hover:underline transition ease-in-out"
+          >
             Login
           </Link>
         </p>
