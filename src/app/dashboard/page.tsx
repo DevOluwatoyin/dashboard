@@ -1,11 +1,11 @@
 import DashboardHeader from "@/components/DashboardHeader";
 import Interviews from "@/components/Interviews";
 import UserStats from "@/components/UserStats";
-import Sidebar from "@/components/Sidebar";
 import React from "react";
 import Cta from "@/components/Cta";
 import Viewers from "@/components/Viewers";
 import ProfileViewsGraph from "@/components/ProfileViewsGraph";
+import Sidebar from "@/components/Sidebar";
 
 const Dashboard = () => {
   return (
@@ -22,7 +22,7 @@ const Dashboard = () => {
               <Cta />
             </div>
           </div>
-          <Interviews />
+          {/* <Interviews /> */}
         </div>
       </div>
     </div>

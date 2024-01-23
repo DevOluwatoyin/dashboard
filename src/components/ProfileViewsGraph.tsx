@@ -4,6 +4,7 @@ import chat2 from "../assets/chat2.svg";
 import { viewersList } from "@/constants/viewersList";
 import Image from "next/image";
 import { scaleValues } from "@/constants/scale";
+import BarChart from "./BarChart";
 
 const ProfileViewsGraph = () => {
   return (
@@ -32,14 +33,15 @@ const ProfileViewsGraph = () => {
         </div>
       </div>
       <div className="pt-8">
-        <div className="flex flex-col-reverse gap-9">
+        <BarChart />
+        {/* <div className="flex flex-col-reverse gap-9">
           {scaleValues.map((value, id) => (
             <span key={id} className="text-[10px] text-gray-lighter flex items-center gap-10 pr-8">
               {value.scale}
               <hr className="border-t-2 border-dashed border-[#E4ECF7] h-[1px] w-[695px] flex-1" />
             </span>
           ))}
-        </div>
+        </div> */}
       </div>
     </div>
   );
