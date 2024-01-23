@@ -9,7 +9,7 @@ const Viewers = () => {
       <div className="flex items-center justify-center gap-4 pt-8">
         <div className="flex flex-col gap-4">
           {viewersList.map((item) => (
-            <div>
+            <div key={item.id}>
               <p className="flex items-center gap-1">
                 <Image src={item.image} alt={item.text} />
                 <span className="text-xs text-heading-dark">{item.number}</span>
