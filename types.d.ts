@@ -39,6 +39,10 @@ declare global {
     style?: CSSProperties;
   }
 
+  interface GraphScale {
+    scale: string;
+  }
+
   interface ContactsData {
     name: string;
     image: StaticImageData;
