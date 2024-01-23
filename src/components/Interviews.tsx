@@ -1,6 +1,6 @@
-import { interviewsData } from "@/constants/interviewsData";
 import React from "react";
 import InterviewsCard from "./InterviewsCard";
+import { interviewsData } from "@/constants/interviewsData";
 
 const Interviews = () => {
   return (

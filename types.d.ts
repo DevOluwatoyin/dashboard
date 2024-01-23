@@ -20,10 +20,10 @@ declare global {
 
   interface InputProps {
     name: string;
+    placeholder: string;
     value?: string;
     label: string;
     type?: HTMLInputTypeAttribute;
-    placeholder: string;
     id?: string;
   }
 
@@ -39,7 +39,7 @@ declare global {
     style?: CSSProperties;
   }
 
-  interface ContactsData{
+  interface ContactsData {
     name: string;
     image: StaticImageData;
     location: string;

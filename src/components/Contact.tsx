@@ -1,7 +1,6 @@
-import { contactsDetails } from "@/constants/contactsDetails";
-import Image from "next/image";
 import React from "react";
 import ContactCard from "./ContactCard";
+import { contactsDetails } from "@/constants/contactsDetails";
 
 const Contact = () => {
   return (
