@@ -33,8 +33,8 @@ const ProfileViewsGraph = () => {
       </div>
       <div className="pt-8">
         <div className="flex flex-col-reverse gap-9">
-          {scaleValues.map((value) => (
-            <span className="text-[10px] text-gray-lighter flex items-center gap-10 pr-8">
+          {scaleValues.map((value, id) => (
+            <span key={id} className="text-[10px] text-gray-lighter flex items-center gap-10 pr-8">
               {value.scale}
               <hr className="border-t-2 border-dashed border-[#E4ECF7] h-[1px] w-[695px] flex-1" />
             </span>
