@@ -5,6 +5,7 @@ import Sidebar from "@/components/Sidebar";
 import React from "react";
 import Cta from "@/components/Cta";
 import Viewers from "@/components/Viewers";
+import ProfileViewsGraph from "@/components/ProfileViewsGraph";
 
 const Dashboard = () => {
   return (
@@ -14,8 +15,9 @@ const Dashboard = () => {
         <DashboardHeader />
         <div className="flex flex-col p-[30px] gap-[30px] bg-gradient-linear-two">
           <UserStats />
-          <div>
-            <div>
+          <div className="flex justify-center gap-7">
+            <ProfileViewsGraph />
+            <div className="flex gap-7 flex-col">
               <Viewers />
               <Cta />
             </div>
