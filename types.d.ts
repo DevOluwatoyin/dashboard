@@ -82,6 +82,7 @@ declare global {
   interface BarGraphProps {
     maxValue: number;
     barGroups: [Views, Views, Views][];
+    scaleValues: GraphScale[];
   }
 
   interface YScaleData {

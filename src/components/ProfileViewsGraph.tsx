@@ -47,15 +47,12 @@ const ProfileViewsGraph = () => {
           />
         </div>
       </div>
-      <div className="pt-8 flex gap-10 justify-center">
-        <div className="flex flex-col-reverse gap-9">
-          {scaleValues.map((value, id) => (
-            <span key={id} className="text-[10px] text-gray-lighter">
-              {value.scale}
-            </span>
-          ))}
-        </div>
-        <BarGraph maxValue={maxScaleValue} barGroups={barGroups} />
+      <div className="pt-8 flex justify-center h-[290px]">
+        <BarGraph
+          maxValue={maxScaleValue}
+          barGroups={barGroups}
+          scaleValues={scaleValues.toReversed()}
+        />
       </div>
     </div>
   );
