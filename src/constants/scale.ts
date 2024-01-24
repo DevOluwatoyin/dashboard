@@ -183,3 +183,4 @@ export const getViewsData = (graphData: GraphData[]) => {
     return item.views.map((each) => ({}));
   });
 };
+

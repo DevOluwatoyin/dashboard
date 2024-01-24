@@ -22,7 +22,7 @@ const Dashboard = () => {
               <Cta />
             </div>
           </div>
-          {/* <Interviews /> */}
+          <Interviews />
         </div>
       </div>
     </div>

@@ -83,6 +83,7 @@ declare global {
     maxValue: number;
     barGroups: [Views, Views, Views][];
     scaleValues: GraphScale[];
+    days: string[];
   }
 
   interface YScaleData {

@@ -13,14 +13,24 @@ const ProfileViewsGraph = () => {
   const [scaleValues, setScaleValues] = useState<GraphScale[]>([]);
   const [maxScaleValue, setMaxScaleValue] = useState<number>(0);
   const [barGroups, setBarGroups] = useState<[Views, Views, Views][]>([]);
+  const [days, setDays] = useState<string[]>([]);
 
-  useEffect(() => {
-    setGraphData(graphDataLists);
+  function manageGraphData(dataLists: GraphData[]) {
     const YScales = getYScales(graphDataLists);
     setScaleValues(YScales.scaleValues);
     setMaxScaleValue(YScales.maxScaleValue);
     setBarGroups(graphDataLists.map((list) => list.views));
+
+    setDays(graphData.map((data)=>(data.day)));
+  }
+
+  useEffect(() => {
+    setGraphData(graphDataLists);
   }, []);
+
+  useEffect(() => {
+    manageGraphData(graphData);
+  }, [graphData]);
 
   return (
     <div className="drop w-[825px] h-[415px] flex-shrink-0 bg-white rounded-3xl flex-1 p-6">
@@ -52,6 +62,7 @@ const ProfileViewsGraph = () => {
           maxValue={maxScaleValue}
           barGroups={barGroups}
           scaleValues={scaleValues.toReversed()}
+          days={days}
         />
       </div>
     </div>
