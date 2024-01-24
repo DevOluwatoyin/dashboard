@@ -33,7 +33,7 @@ const ProfileViewsGraph = () => {
   }, [graphData]);
 
   return (
-    <div className="drop w-[825px] h-[415px] flex-shrink-0 bg-white rounded-3xl flex-1 p-6">
+    <div className="drop w-full h-[415px] bg-white rounded-3xl flex-1 p-6">
       <div className="flex justify-between items-center">
         <h4 className="text-theme-dark font-semibold leading-[25px]">
           Profile views

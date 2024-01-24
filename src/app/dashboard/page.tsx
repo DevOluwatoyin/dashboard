@@ -15,9 +15,9 @@ const Dashboard = () => {
         <DashboardHeader />
         <div className="flex flex-col p-[30px] gap-[30px] bg-gradient-linear-two">
           <UserStats />
-          <div className="flex justify-center gap-7">
+          <div className="grid grid-cols-[3fr_1fr] justify-center gap-[30px]">
             <ProfileViewsGraph />
-            <div className="flex gap-7 flex-col">
+            <div className="grid grid-rows-2 gap-[30px] flex-col">
               <Viewers />
               <Cta />
             </div>
