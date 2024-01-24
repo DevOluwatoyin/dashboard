@@ -1,12 +1,27 @@
-import React from "react";
+"use client";
+import React, { useEffect, useState } from "react";
 import Button from "./Button";
 import chat2 from "../assets/chat2.svg";
 import { viewersList } from "@/constants/viewersList";
 import Image from "next/image";
-import { scaleValues } from "@/constants/scale";
-import BarChart from "./BarChart";
+import { graphDataLists, scaleValues } from "@/constants/scale";
+import { getYScales } from "@/constants/scale";
+import BarGraph from "./BarGraph";
 
 const ProfileViewsGraph = () => {
+  const [graphData, setGraphData] = useState<GraphData[]>([]);
+  const [scaleValues, setScaleValues] = useState<GraphScale[]>([]);
+  const [maxScaleValue, setMaxScaleValue] = useState<number>(0);
+  const [barGroups, setBarGroups] = useState<[Views, Views, Views][]>([]);
+
+  useEffect(() => {
+    setGraphData(graphDataLists);
+    const YScales = getYScales(graphDataLists);
+    setScaleValues(YScales.scaleValues);
+    setMaxScaleValue(YScales.maxScaleValue);
+    setBarGroups(graphDataLists.map((list) => list.views));
+  }, []);
+
   return (
     <div className="drop w-[825px] h-[415px] flex-shrink-0 bg-white rounded-3xl flex-1 p-6">
       <div className="flex justify-between items-center">
@@ -32,16 +47,15 @@ const ProfileViewsGraph = () => {
           />
         </div>
       </div>
-      <div className="pt-8">
-        <BarChart />
-        {/* <div className="flex flex-col-reverse gap-9">
+      <div className="pt-8 flex gap-10 justify-center">
+        <div className="flex flex-col-reverse gap-9">
           {scaleValues.map((value, id) => (
-            <span key={id} className="text-[10px] text-gray-lighter flex items-center gap-10 pr-8">
+            <span key={id} className="text-[10px] text-gray-lighter">
               {value.scale}
-              <hr className="border-t-2 border-dashed border-[#E4ECF7] h-[1px] w-[695px] flex-1" />
             </span>
           ))}
-        </div> */}
+        </div>
+        <BarGraph maxValue={maxScaleValue} barGroups={barGroups} />
       </div>
     </div>
   );

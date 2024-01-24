@@ -39,10 +39,6 @@ declare global {
     style?: CSSProperties;
   }
 
-  interface GraphScale {
-    scale: string;
-  }
-
   interface ContactsData {
     name: string;
     image: StaticImageData;
@@ -54,6 +50,43 @@ declare global {
     value: string;
     rate: string;
     style: string;
+  }
+
+  interface GraphScale {
+    scale: string;
+  }
+
+  interface Views {
+    category?: string;
+    color: string;
+    value: number;
+  }
+
+  interface GraphData {
+    day: string;
+    views: [Views, Views, Views];
+  }
+
+  interface BarProps {
+    color: string;
+    value: number;
+    maxValue: number;
+    width?: string;
+  }
+
+  interface BarGroupProps {
+    maxValue: number;
+    dataGroup: [Views, Views, Views];
+  }
+
+  interface BarGraphProps {
+    maxValue: number;
+    barGroups: [Views, Views, Views][];
+  }
+
+  interface YScaleData {
+    scaleValues: GraphScale[];
+    maxScaleValue: number;
   }
 
   interface InterviewProps {
