@@ -61,7 +61,7 @@ const ProfileViewsGraph = () => {
         <BarGraph
           maxValue={maxScaleValue}
           barGroups={barGroups}
-          scaleValues={scaleValues.toReversed()}
+          scaleValues={scaleValues}
           days={days}
         />
       </div>
