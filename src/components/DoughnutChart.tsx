@@ -2,6 +2,7 @@
 import React, { useEffect } from "react";
 import Chart from "chart.js/auto";
 
+
 const DoughnutChart = () => {
   useEffect(() => {
     const canvas = document.getElementById("myChart");
@@ -15,6 +16,22 @@ const DoughnutChart = () => {
         if (existingChart) {
           existingChart.destroy();
         }
+
+        const doughnutText = {
+          id: "doughnutText",
+          beforeDatasetsDraw(chart: any) {
+            const { ctx, data } = chart;
+            ctx.save();
+            const xCoor = chart.getDatasetMeta(0).data[0].x;
+            const yCoor = chart.getDatasetMeta(0).data[0].y;
+            ctx.font = "bold 30px sans-serif";
+            ctx.fillStyle = "red";
+            ctx.textAlign = "center";
+            ctx.textBaseline = "middle";
+            ctx.fillText("text", xCoor, yCoor);
+            ctx.restore();
+          }
+        };
 
         const myChart = new Chart(ctx, {
           type: "doughnut",
@@ -31,11 +48,8 @@ const DoughnutChart = () => {
             plugins: {
               legend: {
                 display: false,
-                // centerText: {
-                //   display: true,
-                //   text: "280",
-                // },
               },
+              doughnutText: doughnutText as any, // Type casting to bypass TypeScript error
             },
           },
         });
