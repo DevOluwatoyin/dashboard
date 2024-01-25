@@ -2,7 +2,6 @@
 import React, { useEffect } from "react";
 import Chart from "chart.js/auto";
 
-
 const DoughnutChart = () => {
   useEffect(() => {
     const canvas = document.getElementById("myChart");
@@ -16,22 +15,6 @@ const DoughnutChart = () => {
         if (existingChart) {
           existingChart.destroy();
         }
-
-        const doughnutText = {
-          id: "doughnutText",
-          beforeDatasetsDraw(chart: any) {
-            const { ctx, data } = chart;
-            ctx.save();
-            const xCoor = chart.getDatasetMeta(0).data[0].x;
-            const yCoor = chart.getDatasetMeta(0).data[0].y;
-            ctx.font = "bold 30px sans-serif";
-            ctx.fillStyle = "red";
-            ctx.textAlign = "center";
-            ctx.textBaseline = "middle";
-            ctx.fillText("text", xCoor, yCoor);
-            ctx.restore();
-          }
-        };
 
         const myChart = new Chart(ctx, {
           type: "doughnut",
@@ -49,7 +32,6 @@ const DoughnutChart = () => {
               legend: {
                 display: false,
               },
-              doughnutText: doughnutText as any, // Type casting to bypass TypeScript error
             },
           },
         });
@@ -72,7 +54,7 @@ const DoughnutChart = () => {
 
   return (
     <>
-      <div>
+      <div className="relative">
         <canvas
           id="myChart"
           style={{
@@ -81,6 +63,9 @@ const DoughnutChart = () => {
             transform: "rotate(-80deg)",
           }}
         ></canvas>
+        <span className="absolute top-[33px] left-[37px] inline-block content['I am only here'] w-[36px] text-center text-heading-dark font-semibold text-[28px]">
+          23
+        </span>
       </div>
     </>
   );
