@@ -1,12 +1,12 @@
 import { viewersList } from "@/constants/viewersList";
 import Image from "next/image";
 import React from "react";
-
+import DoughnutChart from "./DoughnutChart";
 const Viewers = () => {
   return (
     <div className="drop w-full h-[234px] rounded-3xl flex-shrink-0 bg-white p-5">
       <p className="text-theme-dark font-semibold leading-[25px]">Viewers</p>
-      <div className="flex items-center justify-center gap-4 pt-8">
+      <div className="flex items-center justify-center gap-10">
         <div className="flex flex-col gap-4">
           {viewersList.map((item) => (
             <div key={item.id}>
@@ -18,7 +18,9 @@ const Viewers = () => {
             </div>
           ))}
         </div>
-        <div></div>
+        <div>
+          <DoughnutChart />
+        </div>
       </div>
     </div>
   );
