@@ -6,12 +6,14 @@ import Cta from "@/components/Cta";
 import Viewers from "@/components/Viewers";
 import ProfileViewsGraph from "@/components/ProfileViewsGraph";
 import Sidebar from "@/components/Sidebar";
+import SidebarControl from "@/components/SidebarControl";
 
 const Dashboard = () => {
   return (
     <div className="flex">
-      <Sidebar />
-      <div className="flex-1 ml-[250px]">
+      {/* <Sidebar /> */}
+      <div className="flex-1 md:ml-[250px]">
+        <SidebarControl />
         <DashboardHeader />
         <div className="flex flex-col p-[30px] gap-[30px] bg-gradient-linear-two">
           <UserStats />

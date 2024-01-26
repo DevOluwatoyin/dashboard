@@ -6,8 +6,8 @@ import { sideLists } from "@/constants/sidebarNav";
 import Button from "./Button";
 import divider from "../assets/divider.svg";
 import Contact from "./Contact";
-import user from "../assets/user.svg"
-import logout from "../assets/logout.svg"
+import user from "../assets/user.svg";
+import logout from "../assets/logout.svg";
 
 const Sidebar = () => {
   return (
