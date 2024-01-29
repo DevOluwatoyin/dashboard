@@ -11,7 +11,7 @@ import SidebarControl from "@/components/SidebarControl";
 const Dashboard = () => {
   return (
     <div className="flex">
-      {/* <Sidebar /> */}
+      <Sidebar />
       <div className="flex-1 md:ml-[250px]">
         <SidebarControl />
         <DashboardHeader />
