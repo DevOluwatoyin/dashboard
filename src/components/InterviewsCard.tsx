@@ -1,8 +1,8 @@
 import Image from "next/image";
 import React from "react";
-import more from "../assets/more.svg";
-import calendar from "../assets/calendar.svg";
-import camera from "../assets/camera.svg";
+import more from "/public/icons/more.svg";
+import calendar from "/public/icons/calendar.svg";
+import camera from "/public/icons/camera.svg";
 
 const InterviewsCard: React.FC<{ interviewDetails: InterviewProps }> = ({
   interviewDetails: item,

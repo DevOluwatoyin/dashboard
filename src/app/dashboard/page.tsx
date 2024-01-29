@@ -11,9 +11,9 @@ import SidebarControl from "@/components/SidebarControl";
 const Dashboard = () => {
   return (
     <div className="flex">
-      <Sidebar />
+      {/* <Sidebar /> */}
       <div className="flex-1 md:ml-[250px]">
-        <SidebarControl />
+        {/* <SidebarControl /> */}
         <DashboardHeader />
         <div className="flex flex-col p-[30px] gap-[30px] bg-gradient-linear-two">
           <UserStats />

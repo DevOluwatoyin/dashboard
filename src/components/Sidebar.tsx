@@ -1,29 +1,27 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import purpleLogo from "../assets/logo2.svg";
+import purpleLogo from "/public/icons/logo2.svg";
 import { sideLists } from "@/constants/sidebarNav";
 import Button from "./Button";
-import divider from "../assets/divider.svg";
+import divider from "/public/icons/divider.svg";
 import Contact from "./Contact";
-import user from "../assets/user.svg";
-import logout from "../assets/logout.svg";
+import user from "/public/icons/user.svg";
+import logout from "/public/icons/logout.svg";
 
 const Sidebar = () => {
   return (
-    <div className="drop bg-white w-[250px] flex-shrink-0 text-center h-screen fixed">
+    <div className="drop bg-white w-[250px] flex-shrink-0 text-center h-screen fixed z-50">
       <Link
         href="/dashboard"
-        className="flex items-center gap-1 mt-[30px] ml-[30px] top-8 left-6 max-w-[200px]"
+        className="flex items-center gap-1 relative top-8 left-6 max-w-[200px]"
       >
         <Image src={purpleLogo} alt="stryke logo" />
         <span className="text-[28px] font-bold leading-[38px] text-[#646DFF]">
           Stryke
         </span>
       </Link>
-      <div className="flex flex-col justify-center h-full">
-
-      <div className="flex flex-col w-full basis-0 top-16 justify-between">
+      <div className="flex flex-col w-full relative top-16 justify-between">
         {sideLists.map((item) => (
           <Button
             key={item.id}
@@ -35,11 +33,11 @@ const Sidebar = () => {
         ))}
       </div>
 
-      <Image src={divider} alt="divider" className=" -bottom-[70px]" />
+      <Image src={divider} alt="divider" className="relative -bottom-[70px]" />
 
       <Contact />
 
-      <div className=" -bottom-36 flex flex-col">
+      <div className="relative -bottom-36 flex flex-col">
         <Button
           icon={user}
           text="Account"
@@ -51,7 +49,6 @@ const Sidebar = () => {
           link="/"
           buttonStyles="flex flex-between items-center px-6 py-3 gap-5 font-semibold text-sm text-gray-dark"
         />
-      </div>
       </div>
     </div>
   );

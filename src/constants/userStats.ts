@@ -1,7 +1,7 @@
-import pinkIcon from "../assets/pink-connection.svg";
-import blueIcon from "../assets/blue-connection.svg";
-import orangeIcon from "../assets/orange-connection.svg";
-import greenIcon from "../assets/green-connection.svg";
+import pinkIcon from "/public/icons/pink-connection.svg";
+import blueIcon from "/public/icons/blue-connection.svg";
+import orangeIcon from "/public/icons/orange-connection.svg";
+import greenIcon from "/public/icons/green-connection.svg";
 
 export const stats: StatsProps[] = [
   {

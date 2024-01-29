@@ -1,8 +1,8 @@
-import home from "../assets/home.svg";
-import hamster from "../assets/hamster.svg";
-import chat from "../assets/chat.svg";
-import services from "../assets/services.svg";
-import customers from "../assets/customers.svg";
+import home from "/public/icons/home.svg";
+import hamster from "/public/icons/hamster.svg";
+import chat from "/public/icons/chat.svg";
+import services from "/public/icons/services.svg";
+import customers from "/public/icons/customers.svg";
 
 export const sideLists: SideListData[] = [
   {

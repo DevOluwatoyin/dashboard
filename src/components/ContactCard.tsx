@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import React from 'react'
-import chat from "../assets/chat.svg";
+import chat from "/public/icons/chat.svg";
 
 const ContactCard: React.FC<{ contactsDetails: ContactsData }> = ({
   contactsDetails:item

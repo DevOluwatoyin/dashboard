@@ -1,6 +1,6 @@
-import marie from "../assets/people/marie-active.png";
-import mj from "../assets/people/mj.png";
-import heather from "../assets/people/heather-offline.png";
+import marie from "/public/people/marie-active.png";
+import mj from "/public/people/mj.png";
+import heather from "/public/people/heather-offline.png";
 
 export const contactsDetails: ContactsData[] = [
   {

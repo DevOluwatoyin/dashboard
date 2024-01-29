@@ -1,11 +1,12 @@
 import React from "react";
 import Button from "./Button";
-import download from "../assets/download.svg";
-import create from "../assets/create.svg";
+import download from "/public/icons/download.svg";
+import create from "/public/icons/create.svg";
+
 
 const DashboardHeader = () => {
   return (
-    <div className="h-[99px] bg-white pt-[30px] pb-8 border-b border-border-light">
+    <div className="h-20 bg-white pt-[30px] pb-8 border-b border-border-light md:h-[99px]">
       <header className="flex justify-between items-center px-[30px]">
         <h2 className="text-heading-dark text-[28px] font-semibold">
           Dashboard

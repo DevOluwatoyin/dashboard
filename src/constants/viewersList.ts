@@ -1,6 +1,6 @@
-import pinkIndicator from "../assets/pink-indicator.svg";
-import blueIndicator from "../assets/blue-indicator.svg";
-import grayIndicator from "../assets/gray-indicator.svg";
+import pinkIndicator from "/public/icons/pink-indicator.svg";
+import blueIndicator from "/public/icons/blue-indicator.svg";
+import grayIndicator from "/public/icons/gray-indicator.svg";
 
 export const viewersList: SideListData[] = [
   {

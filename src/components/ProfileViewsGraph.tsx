@@ -1,7 +1,7 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import Button from "./Button";
-import chat2 from "../assets/chat2.svg";
+import chat2 from "/public/icons/chat2.svg";
 import { viewersList } from "@/constants/viewersList";
 import Image from "next/image";
 import { graphDataLists, scaleValues } from "@/constants/scale";

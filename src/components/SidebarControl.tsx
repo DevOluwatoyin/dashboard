@@ -1,9 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import purpleLogo from "../assets/logo2.svg";
-import ham from "../assets/ham.svg"
-import close from "../assets/close.svg"
+import purpleLogo from "/public/icons/logo2.svg";
+import ham from "/public/icons/ham.svg"
+import close from "/public/icons/close.svg"
 
 const SidebarControl = () => {
   return (

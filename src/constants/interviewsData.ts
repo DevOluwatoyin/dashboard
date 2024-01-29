@@ -1,11 +1,11 @@
-import joe from "../assets/people/joe.png";
-import outcrowd from "../assets/companies/outcrowd.png";
-import maria from "../assets/people/maria.png";
-import dribbble from "../assets/companies/dribbble.png";
-import albert from "../assets/people/albert.png";
-import netguru from "../assets/companies/netguru.png";
-import heather from "../assets/people/heather.png";
-import mailchimp from "../assets/companies/mailchimp.png";
+import joe from "/public/people/joe.png";
+import outcrowd from "/public/companies/outcrowd.png";
+import maria from "/public/people/maria.png";
+import dribbble from "/public/companies/dribbble.png";
+import albert from "/public/people/albert.png";
+import netguru from "/public/companies/netguru.png";
+import heather from "/public/people/heather.png";
+import mailchimp from "/public/companies/mailchimp.png";
 
 export const interviewsData: InterviewProps[] = [
   {

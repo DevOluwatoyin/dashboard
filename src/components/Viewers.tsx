@@ -2,6 +2,7 @@ import { viewersList } from "@/constants/viewersList";
 import Image from "next/image";
 import React from "react";
 import DoughnutChart from "./DoughnutChart";
+
 const Viewers = () => {
   return (
     <div className="drop w-full h-[234px] rounded-3xl flex-shrink-0 bg-white p-5">
