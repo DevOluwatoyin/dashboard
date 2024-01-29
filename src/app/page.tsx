@@ -42,7 +42,7 @@ export default function Home() {
           <form action="" className="pt-3 flex flex-col justify-between gap-6">
             <Input
               label="E-mail or phone number"
-              type="email"
+              type="text"
               id="email or phone number"
               name="email or phone number"
               placeholder="Type your e-mail or phone number"
@@ -58,7 +58,7 @@ export default function Home() {
             <Button
               text="Sign in"
               buttonStyles="w-full bg-primary px-6 py-4 rounded-lg text-white font-semibold text-sm"
-              link="/dashboard"
+              // link="/dashboard"
               linkStyles="w-full"
             />
           </form>
