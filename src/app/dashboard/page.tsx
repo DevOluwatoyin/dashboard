@@ -12,7 +12,7 @@ const Dashboard = () => {
   return (
     <div className="flex w-full">
       {/* <Sidebar /> */}
-      <div className="flex-1 md:ml-[250px]">
+      <div className="flex-1 lg:ml-[250px]">
         {/* <SidebarControl /> */}
         <DashboardHeader />
         <div className="flex flex-col gap-[30px] bg-gradient-linear-two p-3 lg:p-[30px]">

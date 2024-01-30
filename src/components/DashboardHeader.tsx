@@ -18,7 +18,7 @@ const DashboardHeader = () => {
         <h2 className="text-heading-dark text-[28px] font-semibold">
           Dashboard
         </h2>
-        <div className="flex items-center text-xs font-semibold gap-1 flex-col justify-center md:inline-flex md:flex-row">
+        <div className="flex items-center text-xs font-semibold gap-1 flex-col justify-center md:inline-flex md:flex-row md:gap-3">
           <Button
             text="Download"
             icon={download}
