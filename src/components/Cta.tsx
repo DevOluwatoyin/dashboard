@@ -3,7 +3,7 @@ import Button from "./Button";
 
 const Cta = () => {
   return (
-    <div className="drop bg-white rounded-2xl w-full h-[151px] flex flex-col items-center justify-center gap-8 px-4">
+    <div className="drop bg-white rounded-2xl w-full h-[151px] flex flex-col items-center justify-center gap-8 px-4 lg:mt-auto">
       <div className="w-full h-[46px] flex-shrink-0 bg-border-light rounded-lg flex items-center justify-between px-3 overflow-hidden">
         <input
           type="email"
