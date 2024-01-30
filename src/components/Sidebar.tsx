@@ -8,6 +8,7 @@ import divider from "/public/icons/divider.svg";
 import Contact from "./Contact";
 import user from "/public/icons/user.svg";
 import logout from "/public/icons/logout.svg";
+import close from "/public/icons/close.svg";
 
 const Sidebar = () => {
   return (
@@ -21,6 +22,8 @@ const Sidebar = () => {
           Stryke
         </span>
       </Link>
+      <Image src={close} alt="close sidebar" />
+
       <div className="flex flex-col w-full relative top-16 justify-between">
         {sideLists.map((item) => (
           <Button

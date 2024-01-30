@@ -7,16 +7,22 @@ const UserStatsCard: React.FC<{ statDetails: StatsProps }> = ({
   return (
     <div
       key={item.id}
-      className="drop h-[100px] flex items-center gap-3 pl-6 bg-white rounded-2xl"
+      className="drop h-[100px] flex items-center gap-2 p-4 bg-white rounded-2xl md:gap-3 md:pl-6"
     >
       <Image src={item.image} alt="connectivity icon" />
       <div>
-        <p className="text-xs text-gray-lighter font-bold">{item.title}</p>
-        <p className="inline-flex items-center gap-3">
-          <span className="text-theme-dark text-xl font-semibold">
-            {item.value}{" "}
+        <p className="text-[9px] text-gray-lighter font-bold xs:text-[10px] md:text-xs">
+          {item.title}
+        </p>
+        <p className="inline-flex items-center gap-1 md:gap-3">
+          <span className="text-theme-dark text-xs font-semibold xs:text-base md:text-xl">
+            {item.value}
           </span>
-          <span className={`font-bold text-xs ${item.style}`}>{item.rate}</span>
+          <span
+            className={`font-bold text-[8px] xs:text-[10px] md:text-xs ${item.style}`}
+          >
+            {item.rate}
+          </span>
         </p>
       </div>
     </div>

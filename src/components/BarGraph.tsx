@@ -25,7 +25,7 @@ const BarGraph: React.FC<BarGraphProps> = ({
         ))}
       </div>
 
-      <div className="w-full h-full flex justify-between px-10">
+      <div className="w-full h-full flex justify-between gap-5 pl-8 md:px-10">
         {barGroups.map((item, id) => (
           <BarGroup key={id} maxValue={maxValue} dataGroup={item} />
         ))}

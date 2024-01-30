@@ -9,7 +9,7 @@ const Interviews = () => {
         <h4 className="text-lg text-heading-dark">Interviews</h4>
         <button className="text-xs text-primary">Show all</button>
       </div>
-      <div className="flex items-center flex-wrap gap-8 pt-4">
+      <div className="flex justify-center items-center flex-wrap gap-5 pt-4 md:flex-row md:gap-8 ">
         {interviewsData.map((item: InterviewProps) => (
           <InterviewsCard key={item.id} interviewDetails={item} />
         ))}

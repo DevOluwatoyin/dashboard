@@ -29,8 +29,8 @@ const Button: React.FC<GeneralButtonProps> = ({
     return (
       <button className={buttonStyles}>
         {icon ? (
-          <div className="relative w-4 h-4">
-            <Image src={icon} alt="" fill className="object-cover" />
+          <div className="relative">
+            <Image src={icon} alt="" className="object-cover" />
           </div>
         ) : null}
         {text ? <span className="w-max">{text}</span> : null}

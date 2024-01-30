@@ -2,16 +2,23 @@ import React from "react";
 import Button from "./Button";
 import download from "/public/icons/download.svg";
 import create from "/public/icons/create.svg";
-
+import ham from "/public/icons/ham.svg";
+import Image from "next/image";
 
 const DashboardHeader = () => {
   return (
-    <div className="h-20 bg-white pt-[30px] pb-8 border-b border-border-light md:h-[99px]">
-      <header className="flex justify-between items-center px-[30px]">
+    <div className="bg-white border-b border-border-light flex items-center justify-center h-[99px]">
+      <header className="flex justify-between items-center px-4 w-full lg:px-[30px]">
+        <Image
+          src={ham}
+          alt="open sidebar icon"
+          className="max-w-[30px lg:hidden"
+        />
+
         <h2 className="text-heading-dark text-[28px] font-semibold">
           Dashboard
         </h2>
-        <div className="inline-flex items-center gap-4 text-xs font-semibold">
+        <div className="flex items-center text-xs font-semibold gap-1 flex-col justify-center md:inline-flex md:flex-row">
           <Button
             text="Download"
             icon={download}

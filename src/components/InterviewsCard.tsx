@@ -8,7 +8,7 @@ const InterviewsCard: React.FC<{ interviewDetails: InterviewProps }> = ({
   interviewDetails: item,
 }) => {
   return (
-    <div className="drop bg-white w-[255px] h-[203px] flex-1 flex-shrink-0 rounded-2xl flex items-center justify-center">
+    <div className="drop bg-white min-w-fit max-w-[225px] h-[203px] flex-1 flex-shrink-0 rounded-2xl flex items-center justify-center p-4">
       <div>
         <div className="flex justify-between items-start">
           <div>
@@ -20,10 +20,7 @@ const InterviewsCard: React.FC<{ interviewDetails: InterviewProps }> = ({
             />
           </div>
           <button>
-            <Image
-              src={more}
-              alt="view more options"
-            />
+            <Image src={more} alt="view more options" />
           </button>
         </div>
         <p className="mt-[11px]">
@@ -34,12 +31,12 @@ const InterviewsCard: React.FC<{ interviewDetails: InterviewProps }> = ({
             {item.companyName}
           </span>
         </p>
-        <div className="font-bold text-xs text-gray-lighter flex items-center gap-4 mt-4">
-          <div className="flex items-center justify-center gap-2">
+        <div className="font-bold text-[8px] text-gray-lighter flex items-center gap-1 mt-4 md:gap-4 md:text-xs">
+          <div className="flex items-center justify-center gap-1 md:gap-2">
             <Image src={calendar} alt="calendar" />
             <span>Thu. 24</span>
           </div>
-          <div className="flex items-center justify-center gap-3">
+          <div className="flex items-center justify-center gap-1 md:gap-3">
             <Image src={camera} alt="camera" />
             <span>11:00 - 12:00</span>
           </div>

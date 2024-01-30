@@ -21,7 +21,7 @@ const ProfileViewsGraph = () => {
     setMaxScaleValue(YScales.maxScaleValue);
     setBarGroups(graphDataLists.map((list) => list.views));
 
-    setDays(graphData.map((data)=>(data.day)));
+    setDays(graphData.map((data) => data.day));
   }
 
   useEffect(() => {
@@ -38,8 +38,8 @@ const ProfileViewsGraph = () => {
         <h4 className="text-theme-dark font-semibold leading-[25px]">
           Profile views
         </h4>
-        <div className="flex items-center gap-14">
-          <div className="flex items-center justify-between gap-8">
+        <div className="flex items-center gap-8 md:gap-14">
+          <div className="flex flex-col md:gap-8 md:justify-between md:flex-row md:items-center">
             {viewersList.map((item) => (
               <p
                 key={item.id}
