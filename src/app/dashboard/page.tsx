@@ -1,7 +1,8 @@
+"use client"
 import DashboardHeader from "@/components/DashboardHeader";
 import Interviews from "@/components/Interviews";
 import UserStats from "@/components/UserStats";
-import React from "react";
+import React, { useState } from "react";
 import Cta from "@/components/Cta";
 import Viewers from "@/components/Viewers";
 import ProfileViewsGraph from "@/components/ProfileViewsGraph";
@@ -9,12 +10,17 @@ import Sidebar from "@/components/Sidebar";
 import SidebarControl from "@/components/SidebarControl";
 
 const Dashboard = () => {
+    const [isOpen, setIsOpen] = useState(false);
+
+    const handleToggleSidebar = () => {
+      setIsOpen(!isOpen);
+    };
   return (
     <div className="flex w-full">
-      <Sidebar />
+      <Sidebar isOpen={isOpen} toggle={handleToggleSidebar} />
       <div className="flex-1 lg:ml-[200px] xl:ml-[250px]">
         {/* <SidebarControl /> */}
-        <DashboardHeader />
+        <DashboardHeader toggle={handleToggleSidebar} />
         <div className="flex flex-col gap-[30px] bg-gradient-linear-two p-3 lg:p-[30px]">
           <UserStats />
           <div className="grid grid-rows-2 justify-center gap-[30px] md:max-h-[690px] lg:grid-rows-1 lg:grid-cols-[3fr_1fr] xl:justify-between">

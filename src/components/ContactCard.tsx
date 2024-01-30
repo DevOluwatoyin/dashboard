@@ -6,13 +6,13 @@ const ContactCard: React.FC<{ contactsDetails: ContactsData }> = ({
   contactsDetails:item
 }) => {
   return (
-    <div className="flex w-full items-center gap-4">
+    <div className="flex w-full items-center gap-2 xl:gap-4">
       <Image src={item.image} alt={item.name} />
       <div className="flex flex-col items-start">
-        <span className="font-semibold text-sm leading-[23px] text-gray-dark">
+        <span className="font-semibold text-[10px] leading-[23px] text-gray-dark xl:text-sm">
           {item.name}
         </span>
-        <span className="text-xs text-gray-lighter leading-[20px]">
+        <span className="text-[8px] text-gray-lighter leading-[20px] xl-text-xs">
           {item.location}
         </span>
       </div>

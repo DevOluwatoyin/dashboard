@@ -10,11 +10,22 @@ import user from "/public/icons/user.svg";
 import logout from "/public/icons/logout.svg";
 import close from "/public/icons/close.svg";
 
-const Sidebar = () => {
+interface SidebarProps {
+  isOpen: boolean;
+  toggle: () => void;
+}
+
+const Sidebar: React.FC<SidebarProps> = ({ isOpen, toggle }) => {
   return (
-    <div className="hidden drop bg-white w-[250px] flex-shrink-0 text-center h-screen fixed z-50 lg:block lg:w-[200px] xl:w-[250px]">
+    <div
+      className={`${
+        isOpen ? "block" : "hidden"
+      } lg:block lg:w-[200px] xl:w-[250px] fixed text-center h-screen z-50 transition-all ${
+        isOpen ? "bg-white" : ""
+      }`}
+    >
       <div className="flex flex-col justify-between w-full h-full gap-7">
-        <div className="relative top-8 left-6 flex items-center">
+        <div className="relative top-8 left-6 flex items-center gap-2">
           <Link
             href="/dashboard"
             className="flex items-center gap-1 max-w-[200px]"
@@ -24,7 +35,14 @@ const Sidebar = () => {
               Stryke
             </span>
           </Link>
-          <Image src={close} alt="close sidebar" className="lg:hidden" />
+          <button className="flex items-center text-center lg:hidden">
+            <Image
+              src={close}
+              alt="close sidebar"
+              className="w-fit"
+              onClick={toggle}
+            />
+          </button>
         </div>
 
         <div className="flex flex-col w-full justify-between pt-12">
@@ -34,7 +52,7 @@ const Sidebar = () => {
               icon={item.image}
               text={item.text}
               number={item.number}
-              buttonStyles={`flex flex-between items-center px-6 py-3 gap-5 font-semibold text-sm text-gray-dark cursor-pointer hover:text-primary transition-all ${item.style}`}
+              buttonStyles={`flex flex-between items-center px-6 py-3 gap-5 font-semibold text-sm text-gray-dark cursor-pointer hover:text-primary transition-all text-xs xl:text-base ${item.style}`}
             />
           ))}
         </div>

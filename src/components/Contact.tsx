@@ -4,7 +4,7 @@ import { contactsDetails } from "@/constants/contactsDetails";
 
 const Contact = () => {
   return (
-    <div className="">
+    <div>
       <h5 className="flex items-center gap-3 pl-6">
         <span className="uppercase text-[11px] font-semibold text-gray-lighter">
           Contacts
