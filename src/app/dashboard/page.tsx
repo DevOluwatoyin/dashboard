@@ -11,7 +11,7 @@ import SidebarControl from "@/components/SidebarControl";
 const Dashboard = () => {
   return (
     <div className="flex w-full">
-      {/* <Sidebar /> */}
+      <Sidebar />
       <div className="flex-1 lg:ml-[250px]">
         {/* <SidebarControl /> */}
         <DashboardHeader />

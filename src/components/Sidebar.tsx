@@ -22,7 +22,7 @@ const Sidebar = () => {
           Stryke
         </span>
       </Link>
-      <Image src={close} alt="close sidebar" />
+      <Image src={close} alt="close sidebar" className="lg:hidden" />
 
       <div className="flex flex-col w-full relative top-16 justify-between">
         {sideLists.map((item) => (
