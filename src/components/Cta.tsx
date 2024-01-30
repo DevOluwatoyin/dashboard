@@ -10,7 +10,7 @@ const Cta = () => {
           name="subscription mail"
           id="subscription"
           placeholder="E-mail"
-          className="bg-inherit p-2 justify-start max-w-[50%] focus-within:outline-dashed focus-within:outline-primary rounded-2xl"
+          className="bg-inherit p-2 justify-start w-[50%] focus-within:outline-dashed focus-within:outline-primary rounded-2xl md:w-3/4 lg:w-full"
         />
         <Button
           text="Subscribe"

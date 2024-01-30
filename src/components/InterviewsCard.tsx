@@ -8,7 +8,7 @@ const InterviewsCard: React.FC<{ interviewDetails: InterviewProps }> = ({
   interviewDetails: item,
 }) => {
   return (
-    <div className="drop bg-white min-w-fit h-[203px] flex-1 flex-shrink-0 rounded-2xl flex items-center justify-center p-4">
+    <div className="drop bg-white min-w-fit h-[203px] flex-1 flex-shrink-0 rounded-2xl flex items-center justify-center p-4 md:max-w-[255px] lg:max-w-xs">
       <div>
         <div className="flex justify-between items-start">
           <div>
