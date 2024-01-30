@@ -12,7 +12,7 @@ const ContactCard: React.FC<{ contactsDetails: ContactsData }> = ({
         <span className="font-semibold text-[10px] leading-[23px] text-gray-dark xl:text-sm">
           {item.name}
         </span>
-        <span className="text-[8px] text-gray-lighter leading-[20px] xl-text-xs">
+        <span className="text-[8px] text-gray-lighter leading-[20px] xl:text-xs">
           {item.location}
         </span>
       </div>

@@ -27,15 +27,10 @@ const BarGraph: React.FC<BarGraphProps> = ({
 
       <div className="w-full h-full flex justify-between gap-5 pl-5 sm:pl-8 md:px-10">
         {barGroups.map((item, id) => (
-          <BarGroup key={id} maxValue={maxValue} dataGroup={item} />
-        ))}
-      </div>
-
-      <div className="flex justify-between px-10 mt-4">
-        {days.map((day, id) => (
-          <span key={id} className="text-[10px] text-gray-lighter">
-            {day}
-          </span>
+          <div className="flex flex-col items-center">
+            <BarGroup key={id} maxValue={maxValue} dataGroup={item.views} />
+            <span className="text-[10px] text-gray-lighter absolute -bottom-6">{item.day}</span>
+          </div>
         ))}
       </div>
     </div>

@@ -2,6 +2,7 @@ import { StaticImageData } from "next/image";
 
 // Global state types
 export {};
+
 declare global {
   interface ComponentWithChildrenOnly {
     children: React.ReactNode;
@@ -80,7 +81,7 @@ declare global {
 
   interface BarGraphProps {
     maxValue: number;
-    barGroups: [Views, Views, Views][];
+    barGroups: GraphData[];
     scaleValues: GraphScale[];
     days: string[];
   }

@@ -12,14 +12,14 @@ const ProfileViewsGraph = () => {
   const [graphData, setGraphData] = useState<GraphData[]>([]);
   const [scaleValues, setScaleValues] = useState<GraphScale[]>([]);
   const [maxScaleValue, setMaxScaleValue] = useState<number>(0);
-  const [barGroups, setBarGroups] = useState<[Views, Views, Views][]>([]);
+  const [barGroups, setBarGroups] = useState<GraphData[]>([]);
   const [days, setDays] = useState<string[]>([]);
 
   function manageGraphData(dataLists: GraphData[]) {
     const YScales = getYScales(graphDataLists);
     setScaleValues(YScales.scaleValues);
     setMaxScaleValue(YScales.maxScaleValue);
-    setBarGroups(graphDataLists.map((list) => list.views));
+    setBarGroups(graphDataLists);
 
     setDays(graphData.map((data) => data.day));
   }
