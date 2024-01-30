@@ -5,7 +5,7 @@ import { interviewsData } from "@/constants/interviewsData";
 const Interviews = () => {
   return (
     <section>
-      <div className="flex h-[22px] justify-between items-end font-bold">
+      <div className="flex h-[22px] justify-between items-end font-bold px-3">
         <h4 className="text-lg text-heading-dark">Interviews</h4>
         <button className="text-xs text-primary">Show all</button>
       </div>

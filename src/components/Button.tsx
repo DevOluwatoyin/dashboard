@@ -33,7 +33,9 @@ const Button: React.FC<GeneralButtonProps> = ({
             <Image src={icon} alt="" className="object-cover" />
           </div>
         ) : null}
-        {text ? <span className="w-max">{text}</span> : null}
+        {text ? (
+          <span className="w-max">{text}</span>
+        ) : null}
         {number && (
           <span className="w-max inline-block text-primary bg-[#E1E8FF] px-[10px] py-0.5 rounded-full ml-auto">
             {number}

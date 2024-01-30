@@ -15,9 +15,9 @@ const BarGraph: React.FC<BarGraphProps> = ({
         {scaleValuesReversed.map((value, id) => (
           <div
             key={id}
-            className="relative h-fit w-full flex items-center gap-8 px-10"
+            className="relative h-fit w-full flex items-center pl-4 sm:pl-6 md:gap-8 md:px-10"
           >
-            <span className="absolute text-[10px] text-gray-lighter -left-1">
+            <span className="absolute text-[8px] text-gray-lighter -left-1 md:text-[10px]">
               {value.scale}
             </span>
             <hr className="border-t-2 border-dashed border-[#E4ECF7] h-[1px] w-[695px] flex-1" />
@@ -25,7 +25,7 @@ const BarGraph: React.FC<BarGraphProps> = ({
         ))}
       </div>
 
-      <div className="w-full h-full flex justify-between gap-5 pl-8 md:px-10">
+      <div className="w-full h-full flex justify-between gap-5 pl-5 sm:pl-8 md:px-10">
         {barGroups.map((item, id) => (
           <BarGroup key={id} maxValue={maxValue} dataGroup={item} />
         ))}

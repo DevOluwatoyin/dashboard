@@ -71,7 +71,6 @@ declare global {
     color: string;
     value: number;
     maxValue: number;
-    width?: string;
   }
 
   interface BarGroupProps {

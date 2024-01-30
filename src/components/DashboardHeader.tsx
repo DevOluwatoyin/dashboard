@@ -8,14 +8,14 @@ import Image from "next/image";
 const DashboardHeader = () => {
   return (
     <div className="bg-white border-b border-border-light flex items-center justify-center h-[99px]">
-      <header className="flex justify-between items-center px-4 w-full lg:px-[30px]">
+      <header className="flex justify-between items-center px-4 w-full gap-2 lg:px-[30px]">
         <Image
           src={ham}
           alt="open sidebar icon"
-          className="max-w-[30px lg:hidden"
+          className="max-w-[20px] lg:hidden"
         />
 
-        <h2 className="text-heading-dark text-[28px] font-semibold">
+        <h2 className="text-heading-dark text-lg font-semibold md:text-[28px]">
           Dashboard
         </h2>
         <div className="flex items-center text-xs font-semibold gap-1 flex-col justify-center md:inline-flex md:flex-row md:gap-3">

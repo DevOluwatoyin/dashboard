@@ -33,17 +33,17 @@ const ProfileViewsGraph = () => {
   }, [graphData]);
 
   return (
-    <div className="drop w-full h-[415px] bg-white rounded-3xl flex-1 p-6">
-      <div className="flex justify-between items-center">
-        <h4 className="text-theme-dark font-semibold leading-[25px]">
+    <div className="drop w-full h-[415px] bg-white rounded-3xl flex-1 pr-3 pl-4 py-6 md:p-6">
+      <div className="flex justify-between items-center gap-2 md:gap-10">
+        <h4 className="text-theme-dark font-semibold text-sm leading-[25px]md:text-base">
           Profile views
         </h4>
-        <div className="flex items-center gap-8 md:gap-14">
+        <div className="flex items-center gap-4 sm:gap-8 md:gap-14">
           <div className="flex flex-col md:gap-8 md:justify-between md:flex-row md:items-center">
             {viewersList.map((item) => (
               <p
                 key={item.id}
-                className="flex items-center font-bold text-gray-lighter text-xs gap-4"
+                className="flex items-center text-[8px] font-bold text-gray-lighter gap-2 md:text-xs md:gap-4"
               >
                 <Image src={item.image} alt={item.text} />
                 <span>{item.text}</span>
@@ -51,7 +51,7 @@ const ProfileViewsGraph = () => {
             ))}
           </div>
           <Button
-            buttonStyles="rounded-md text-white text-xs font-semibold bg-primary py-3 px-5 flex items-center gap-2"
+            buttonStyles="rounded-md text-white text-xs font-semibold bg-primary p-2 md:py-3 md:px-5 flex items-center gap-2"
             text="Export"
             icon={chat2}
           />
