@@ -14,7 +14,7 @@ const Cta = () => {
         />
         <Button
           text="Subscribe"
-          buttonStyles="inline-flex text-xs rounded-md bg-primary text-white px-5 py-3 font-semibold"
+          buttonStyles="inline-flex text-xs rounded-md bg-primary text-white px-5 py-3 font-semibold hover:bg-gray-lighter transition-all"
         />
       </div>
       <p className="text-sm text-gray-dark pl-6 leading-[23px] self-start">

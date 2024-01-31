@@ -52,7 +52,8 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, toggle }) => {
               icon={item.image}
               text={item.text}
               number={item.number}
-              buttonStyles={`flex flex-between items-center px-6 py-3 gap-5 font-semibold text-sm text-gray-dark cursor-pointer hover:text-primary transition-all text-xs xl:text-base ${item.style}`}
+              link="/dashboard"
+              linkStyles={`flex flex-between items-center px-6 py-3 gap-5 font-semibold text-sm text-gray-dark cursor-pointer hover:text-primary transition-all text-xs xl:text-base ${item.style}`}
             />
           ))}
         </div>
@@ -65,13 +66,14 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, toggle }) => {
           <Button
             icon={user}
             text="Account"
-            buttonStyles="flex flex-between items-center px-6 py-3 gap-5 font-semibold text-sm text-gray-dark cursor-pointer hover:text-primary transition-all"
+            link="/dashboard"
+            linkStyles="flex flex-between items-center px-6 py-3 gap-5 font-semibold text-sm text-gray-dark cursor-pointer hover:text-primary transition-all"
           />
           <Button
             icon={logout}
             text="Logout"
             link="/"
-            buttonStyles="flex flex-between items-center px-6 py-3 gap-5 font-semibold text-sm text-gray-dark cursor-pointer hover:text-primary transition-all"
+            linkStyles="flex flex-between items-center px-6 py-3 gap-5 font-semibold text-sm text-gray-dark cursor-pointer hover:text-primary transition-all"
           />
         </div>
       </div>

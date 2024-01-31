@@ -6,19 +6,13 @@ import Input from "@/components/Input";
 import Button from "@/components/Button";
 import Socials from "@/components/Socials";
 import Link from "next/link";
-import { useRouter } from "next/router";
-import { createUserWithEmailAndPassword } from "firebase/auth";
 import { useState } from "react";
-import { firebaseConfig, auth } from "../../firebase";
-import useAppStore from "@/store/useAppStore";
 
 export default function Signup() {
   const [email, setEmail] = useState("");
   const [passwordOne, setPasswordOne] = useState("");
   const [passwordTwo, setPasswordTwo] = useState("");
   const [error, setError] = useState("");
-  // const router = useRouter();
-  const createNewUser = useAppStore((state) => state.signUp);
 
 
   return (
@@ -46,7 +40,7 @@ export default function Signup() {
       </div>
 
       <section className="login pt-4 flex-1 md:bg-white  md:text-heading-dark md:grid items-center content-center">
-        <div className="md:w-[312px] md:mx-auto md:space-y-[30px]">
+        <div className="md:w-[312px] md:mx-auto ">
           <span className="text-4xl font-bold animate-pulse">👋</span>
           <div>
             <h2 className="text-[28px] font-semibold py-2">Hello!</h2>
@@ -78,9 +72,7 @@ export default function Signup() {
 
             <Button
               text="Sign up"
-              buttonStyles="w-full bg-primary px-6 py-4 rounded-lg text-white font-semibold text-sm"
-              // link="/dashboard"
-              linkStyles="w-full"
+              buttonStyles="w-full bg-primary px-6 py-4 rounded-lg text-white font-semibold text-sm hover:bg-primary-soft hover:text-primary transition-all"
             />
           </form>
 

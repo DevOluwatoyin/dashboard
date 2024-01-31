@@ -51,7 +51,7 @@ const ProfileViewsGraph = () => {
             ))}
           </div>
           <Button
-            buttonStyles="rounded-md text-white text-xs font-semibold bg-primary p-2 md:py-3 md:px-5 flex items-center gap-2"
+            buttonStyles="rounded-md text-white text-xs font-semibold bg-primary p-2 md:py-3 md:px-5 flex items-center gap-2  hover:bg-gray-lighter transition-all"
             text="Export"
             icon={chat2}
           />

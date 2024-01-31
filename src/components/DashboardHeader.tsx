@@ -23,12 +23,12 @@ const DashboardHeader = ({ toggle }: { toggle: () => void }) => {
           <Button
             text="Download"
             icon={download}
-            buttonStyles="rounded-md py-3 px-5 flex gap-[10px] items-center border border-border-light text-theme-dark"
+            buttonStyles="rounded-md py-3 px-5 flex gap-[10px] items-center border border-border-light text-theme-dark hover:bg-primary-soft transition-all"
           />
           <Button
             text="Create"
             icon={create}
-            buttonStyles="rounded-md py-3 px-5 flex items-center gap-[10px] bg-primary text-white"
+            buttonStyles="rounded-md py-3 px-5 flex items-center gap-[10px] bg-primary text-white hover:bg-gray-lighter transition-all"
           />
         </div>
       </header>

@@ -27,6 +27,7 @@ const config: Config = {
         "border-light": "#EDF2F7",
         "heading-dark": "#27272E",
         "theme-dark": "#16192C",
+        "primary-soft": "#E1E8FF",
         success: "#66CB9F",
         danger: "#F16063",
       },

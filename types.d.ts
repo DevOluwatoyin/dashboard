@@ -29,16 +29,6 @@ declare global {
     id?: string;
   }
 
-  type AuthSlice = {
-    signedIn: boolean;
-    signIn: (email: string, password: string) => Promise<boolean>;
-    signUp: (email: string, password: string) => Promise<boolean>;
-    logOut: () => Promise<boolean>;
-    googleSignIn: () => Promise<boolean>;
-  };
-
-  type AppStoreState = AuthSlice;
-
   interface GeneralListData {
     id: number;
     image: string;

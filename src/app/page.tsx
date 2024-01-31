@@ -57,9 +57,7 @@ export default function Home() {
 
             <Button
               text="Sign in"
-              buttonStyles="w-full bg-primary px-6 py-4 rounded-lg text-white font-semibold text-sm"
-              // link="/dashboard"
-              linkStyles="w-full"
+              buttonStyles="w-full bg-primary px-6 py-4 rounded-lg text-white font-semibold text-sm hover:bg-primary-soft hover:text-primary transition-all"
             />
           </form>
 
@@ -75,7 +73,10 @@ export default function Home() {
         </div>
         <p className="relative top-3 z-10 text-white text-sm md:text-gray-lighter text-right font-semibold md:right-4">
           Don&apos;t have an account?
-          <Link href="/signup" className="text-primary ml-1 hover:underline transition ease-in-out">
+          <Link
+            href="/signup"
+            className="text-primary ml-1 hover:underline transition ease-in-out"
+          >
             Get started
           </Link>
         </p>
