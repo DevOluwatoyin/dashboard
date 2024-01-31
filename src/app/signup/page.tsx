@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import logo from "/public/icons/logo.svg";
 import chat from "/public/icons/chat-bubble.svg";
@@ -5,8 +6,21 @@ import Input from "@/components/Input";
 import Button from "@/components/Button";
 import Socials from "@/components/Socials";
 import Link from "next/link";
+import { useRouter } from "next/router";
+import { createUserWithEmailAndPassword } from "firebase/auth";
+import { useState } from "react";
+import { firebaseConfig, auth } from "../../firebase";
+import useAppStore from "@/store/useAppStore";
 
 export default function Signup() {
+  const [email, setEmail] = useState("");
+  const [passwordOne, setPasswordOne] = useState("");
+  const [passwordTwo, setPasswordTwo] = useState("");
+  const [error, setError] = useState("");
+  // const router = useRouter();
+  const createNewUser = useAppStore((state) => state.signUp);
+
+
   return (
     <main className="relative bg-gradient-linear min-h-screen p-10 py-8 text-white overflow-hidden md:flex md: justify-between md:bg-none md:p-0">
       <div className="flex-1 md:bg-gradient-linear md:relative md:px-10 md:py-8 md:max-w-[586px]">

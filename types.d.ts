@@ -17,6 +17,7 @@ declare global {
     target?: string;
     rel?: string;
     number?: string;
+    onClick?: React.MouseEventHandler<HTMLButtonElement> | undefined;
   }
 
   interface InputProps {
@@ -27,6 +28,16 @@ declare global {
     type?: HTMLInputTypeAttribute;
     id?: string;
   }
+
+  type AuthSlice = {
+    signedIn: boolean;
+    signIn: (email: string, password: string) => Promise<boolean>;
+    signUp: (email: string, password: string) => Promise<boolean>;
+    logOut: () => Promise<boolean>;
+    googleSignIn: () => Promise<boolean>;
+  };
+
+  type AppStoreState = AuthSlice;
 
   interface GeneralListData {
     id: number;

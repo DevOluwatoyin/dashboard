@@ -16,7 +16,7 @@ const Dashboard = () => {
     };
     
   return (
-    <div className="flex w-full">
+    <section className="flex w-full">
       <Sidebar isOpen={isOpen} toggle={handleToggleSidebar} />
       <div className="flex-1 lg:ml-[200px] xl:ml-[250px]">
         <DashboardHeader toggle={handleToggleSidebar} />
@@ -32,7 +32,7 @@ const Dashboard = () => {
           <Interviews />
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
