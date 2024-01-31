@@ -1,3 +1,4 @@
+"use client"
 import Image from "next/image";
 import logo from "/public/icons/logo.svg";
 import chat from "/public/icons/chat-bubble.svg";
@@ -5,8 +6,26 @@ import Input from "@/components/Input";
 import Button from "@/components/Button";
 import Socials from "@/components/Socials";
 import Link from "next/link";
+import { useState } from "react";
+import { useRouter } from "next/navigation";
 
 export default function Home() {
+   const router = useRouter();
+
+   const [email, setEmail] = useState("");
+   const [password, setPassword] = useState("");
+   const [error, setError] = useState("");
+
+   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+     e.preventDefault();
+
+     if (email && password) {
+       router.push("/dashboard");
+     } else {
+       setError("Please fill in all required fields.");
+     }
+  };
+  
   return (
     <main className="relative bg-gradient-linear min-h-screen p-10 py-8 text-white overflow-hidden md:flex md: justify-between md:bg-none md:p-0">
       <div className="flex-1 md:bg-gradient-linear md:relative md:px-10 md:py-8 md:max-w-[586px]">
@@ -39,13 +58,18 @@ export default function Home() {
             <p>Let&apos;s build something great</p>
           </div>
 
-          <form action="" className="pt-3 flex flex-col justify-between gap-6">
+          <form
+            onSubmit={handleSubmit}
+            className="pt-3 flex flex-col justify-between gap-6"
+          >
             <Input
               label="E-mail or phone number"
               type="text"
               id="email or phone number"
               name="email or phone number"
               placeholder="Type your e-mail or phone number"
+              value={email}
+              onChange={(event) => setEmail(event.target.value)}
             />
             <Input
               label="Password"
@@ -53,9 +77,11 @@ export default function Home() {
               name="password"
               id="password"
               placeholder="********"
+              onChange={(event) => setPassword(event.target.value)}
             />
-
+            {error && <small className="text-red-800">{error}</small>}
             <Button
+              type="submit"
               text="Sign in"
               buttonStyles="w-full bg-primary px-6 py-4 rounded-lg text-white font-semibold text-sm hover:bg-primary-soft hover:text-primary transition-all"
             />

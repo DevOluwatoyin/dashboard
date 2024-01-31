@@ -17,6 +17,7 @@ declare global {
     target?: string;
     rel?: string;
     number?: string;
+    type?: string;
     onClick?: React.MouseEventHandler<HTMLButtonElement> | undefined;
   }
 
@@ -27,6 +28,7 @@ declare global {
     label: string;
     type?: HTMLInputTypeAttribute;
     id?: string;
+    onChange?: React.ChangeEventHandler<HTMLInputElement> | undefined;
   }
 
   interface GeneralListData {

@@ -7,13 +7,25 @@ import Button from "@/components/Button";
 import Socials from "@/components/Socials";
 import Link from "next/link";
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 
 export default function Signup() {
+  const router = useRouter();
+
   const [email, setEmail] = useState("");
   const [passwordOne, setPasswordOne] = useState("");
   const [passwordTwo, setPasswordTwo] = useState("");
   const [error, setError] = useState("");
 
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    if (email && passwordOne && passwordTwo) {
+      router.push("/dashboard");
+    } else {
+      setError("Please fill in all required fields.");
+    }
+  };
 
   return (
     <main className="relative bg-gradient-linear min-h-screen p-10 py-8 text-white overflow-hidden md:flex md: justify-between md:bg-none md:p-0">
@@ -47,13 +59,18 @@ export default function Signup() {
             <p>Join Us! Let&apos;s build something great</p>
           </div>
 
-          <form action="" className="pt-3 flex flex-col justify-between gap-6">
+          <form
+            onSubmit={handleSubmit}
+            className="pt-3 flex flex-col justify-between gap-6"
+          >
             <Input
               label="E-mail or phone number"
               type="text"
               id="email or phone number"
               name="email or phone number"
               placeholder="Type your e-mail or phone number"
+              value={email}
+              onChange={(event) => setEmail(event.target.value)}
             />
             <Input
               label="Password"
@@ -61,6 +78,8 @@ export default function Signup() {
               name="password"
               id="password"
               placeholder="********"
+              value={passwordOne}
+              onChange={(event) => setPasswordOne(event.target.value)}
             />
             <Input
               label="Confirm Password"
@@ -68,9 +87,13 @@ export default function Signup() {
               name="confirm password"
               id="confirm password"
               placeholder="********"
+              value={passwordTwo}
+              onChange={(event) => setPasswordTwo(event.target.value)}
             />
+            {error && <small className="text-red-800">{error}</small>}
 
             <Button
+              type="submit"
               text="Sign up"
               buttonStyles="w-full bg-primary px-6 py-4 rounded-lg text-white font-semibold text-sm hover:bg-primary-soft hover:text-primary transition-all"
             />

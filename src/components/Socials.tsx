@@ -11,11 +11,8 @@ const Socials= () => {
         return (
           <Button
             key={id}
-            // link={item.link}
             icon={item.image}
-            target="_blank"
-            rel="no referrer"
-            buttonStyles="bg-white px-6 py-4 rounded-lg shadow-min"
+            buttonStyles="bg-white px-6 py-4 rounded-lg shadow-min hover:bg-primary-soft transition-all"
           />
         );
       })}
